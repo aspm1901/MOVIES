@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Movie Gallery</h1>
+    </header>
+    <div class="filter-container">
+      <select id="categoryFilter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+      </select>
+    </div>
+
+    <div class="grid-container" id="movieGrid">
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="imágenes/acción.webp"
+          alt="Action Movie 1"
+        />
+        <h3 class="movie-title">Game Of Thrones</h3>
+        <p class="movie-description">
+          A thrilling saga of power and betrayal in a mythical land.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="imágenes/acción2.webp"
+          alt="Action Movie 2"
+        />
+        <h3 class="movie-title">Hounds Of War</h3>
+        <p class="movie-description">
+          Intense battles and survival against the odds.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <div class="movie-card" data-genre="comedy">
+        <img
+          class="movie-img"
+          src="imágenes/comedia.webp"
+          alt="Comedy Movie 1"
+        />
+        <h3 class="movie-title">The Simpsons</h3>
+        <p class="movie-description">
+          Join the hilarious antics of America's favorite family.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="comedy">
+        <img
+          class="movie-img"
+          src="imágenes/comedia2.webp"
+          alt="Comedy Movie 2"
+        />
+        <h3 class="movie-title">Despicable Me 4</h3>
+        <p class="movie-description">
+          A heartwarming adventure with a twist of comedy and chaos.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="drama">
+        <img class="movie-img" src="imágenes/drama.webp" alt="Drama Movie 1" />
+        <h3 class="movie-title">It Ends With Us</h3>
+        <p class="movie-description">
+          A touching tale of love, loss, and resilience.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="drama">
+        <img class="movie-img" src="imágenes/drama2.webp" alt="Drama Movie 2" />
+        <h3 class="movie-title">Rebel Ridge</h3>
+        <p class="movie-description">
+          An unsettling journey into the mind of a troubled man.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="horror">
+        <img
+          class="movie-img"
+          src="imágenes/terror.webp"
+          alt="Horror Movie 1"
+        />
+        <h3 class="movie-title">Scream</h3>
+        <p class="movie-description">
+          A suspenseful tale that redefines horror.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="horror">
+        <img
+          class="movie-img"
+          src="imágenes/terror2.webp"
+          alt="Horror Movie 2"
+        />
+        <h3 class="movie-title">The Blair Witch Project</h3>
+        <p class="movie-description">
+          A chilling exploration of fear and the unknown.
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+    </div>
+
+    <div id="movieModal" class="modal" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalMovieImage" class="modal-movie-img" alt="Movie Image" />
+        <h2 id="movieTitle"></h2>
+        <p id="movieDescription"></p>
+      </div>
+    </div>
+
+    <footer>2024 movIMDB. All rights reserved.</footer>
+
+    <script src="./JS/categoryFilter.js"></script>
+    <script src="./JS/modal.js"></script>
+    <script src="./JS/favorite.js"></script>
+  </body>
+</html>
